@@ -1,0 +1,58 @@
+.auth-wrap {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f5fbf9 0%, #e8f5f1 50%, #fff7ef 100%);
+}
+
+.auth-wrap::before, .auth-wrap::after { position: absolute; z-index: 0; content: ''; border-radius: 50%; pointer-events: none; }
+.auth-wrap::before { top: -220px; right: -120px; width: 560px; height: 560px; background: radial-gradient(circle, rgba(37,156,145,.19), rgba(37,156,145,0) 68%); }
+.auth-wrap::after { bottom: -260px; left: -170px; width: 620px; height: 620px; background: radial-gradient(circle, rgba(244,180,123,.18), rgba(244,180,123,0) 68%); }
+.auth-card { position: relative; z-index: 1; max-width: 1080px; border: 1px solid rgba(255,255,255,.92); border-radius: 24px; background: rgba(255,255,255,.9); box-shadow: 0 26px 60px rgba(23,69,76,.13); backdrop-filter: blur(14px); }
+.registration-heading { max-width: 700px; margin-inline: auto; }.registration-heading h1 { color: var(--navy); font-family: 'Playfair Display', Georgia, serif; font-size: 2.15rem; font-weight: 700; letter-spacing: -.035em; }
+.registration-kicker { display: inline-block; padding: .42rem .8rem; color: var(--teal); font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; background: #e4f6f1; border-radius: 999px; }
+.form-section-title { margin: 1.2rem 0 .05rem; padding-bottom: .65rem; color: var(--navy); font-size: .87rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; border-bottom: 1px solid #dfece9; }
+.auth-card .form-control, .auth-card .form-select { padding: .66rem .78rem; background-color: rgba(255,255,255,.85); }.auth-card .form-control:focus, .auth-card .form-select:focus { background-color: #fff; }.auth-card .input-group-text { color: var(--teal); background: #eff9f6; border-color: #d6e3e0; }
+.password-field { position: relative; }
+.password-field .form-control { padding-right: 2.7rem; }
+.password-toggle { position: absolute; top: 50%; right: .35rem; display: grid; width: 2rem; height: 2rem; place-items: center; padding: 0; color: #6d8b86; background: transparent; border: 0; border-radius: 8px; transform: translateY(-50%); }
+.password-toggle:hover, .password-toggle[aria-pressed="true"] { color: var(--teal); }
+.btn-main, .btn-main-outline { display: inline-flex; align-items: center; justify-content: center; min-height: 47px; padding: .75rem 1rem; font-size: .88rem; font-weight: 700; text-decoration: none; border-radius: 11px; transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease; }
+.btn-main { color: #fff; background: linear-gradient(135deg, #0d7b7b, #166075); border: 0; box-shadow: 0 10px 20px rgba(13,123,123,.2); }.btn-main:hover { color: #fff; background: linear-gradient(135deg, #096d6d, #124f63); box-shadow: 0 14px 24px rgba(13,123,123,.28); transform: translateY(-2px); }
+.btn-main-outline { color: var(--teal); background: rgba(255,255,255,.52); border: 1px solid #9ccfc7; }.btn-main-outline:hover { color: var(--navy); background: #e8f6f1; border-color: #79bdb1; transform: translateY(-2px); }
+.auth-card .form-check { padding: .9rem .9rem .9rem 2.25rem; color: #55707a; font-size: .84rem; line-height: 1.55; background: #f2faf7; border: 1px solid #d9ede7; border-radius: 11px; }.auth-card .form-check-input { margin-top: .28rem; }.auth-card .form-check-input:checked { background-color: var(--teal); border-color: var(--teal); }
+@media (max-width: 576px) { .auth-wrap { padding: 1rem .5rem !important; }.auth-card { border-radius: 18px; }.registration-heading h1 { font-size: 1.8rem; } }
+body.registration-embed { background: #f4f8f7; }
+body.registration-embed .auth-wrap { min-height: auto; padding: 3.4rem .75rem .75rem !important; }
+body.registration-embed .auth-wrap::before, body.registration-embed .auth-wrap::after { display: none; }
+
+.auth-card { width: 100%; max-width: 1440px; padding: 28px 24px; background: #fff; border-color: #dce9e5; }
+.registration-heading { max-width: 720px; }
+.registration-heading h1 { font-family: inherit; font-size: clamp(1.65rem, 4vw, 2.25rem); line-height: 1.2; }
+.registration-heading p { font-size: 1rem; line-height: 1.6; }
+.registration-guide { margin: 0 0 26px; padding: 20px 24px; color: #254e56; background: #eef8f4; border: 1px solid #d5e9e0; border-radius: 14px; }
+.registration-guide strong { display: block; margin-bottom: 6px; color: #0d5456; }
+.registration-guide p { margin-bottom: 8px; line-height: 1.6; }
+.registration-guide span { font-size: .9rem; }
+.registration-guide b { color: #a13232; }
+.registration-section { min-width: 0; margin-top: 28px; padding: 0 18px 24px; border: 1px solid #dce7e3; border-radius: 16px; }
+.registration-section .form-section-title { float: none; width: auto; display: flex; align-items: center; gap: 12px; margin: 0 0 12px; padding: 0 10px; color: #153e50; font-size: 1.08rem; letter-spacing: 0; text-transform: none; border: 0; }
+.section-number { display: inline-grid; place-items: center; flex-shrink: 0; width: 34px; height: 34px; color: #fff; background: #107a7a; border-radius: 50%; font-size: .9rem; }
+.auth-card .form-label { margin-bottom: 8px; color: #254653; font-size: 1rem; font-weight: 600; }
+.auth-card .form-control, .auth-card .form-select { min-height: 50px; padding: 12px 14px; font-size: 1rem; border: 1px solid #b9cec8; border-radius: 10px; background-color: #fff; }
+.auth-card .form-control:focus, .auth-card .form-select:focus { border-color: #107a7a; box-shadow: 0 0 0 3px rgba(16,122,122,.15); }
+.auth-card .form-text { color: #536b73; font-size: .9rem; line-height: 1.5; }
+.auth-card input[type="file"] { background: #f6faf8; }
+.auth-card .password-field input { padding-right: 54px; }
+.auth-card .password-toggle { width: 44px; height: 44px; }
+.auth-card .form-check { font-size: 1rem; padding: 20px 20px 20px 48px; }
+.auth-card .form-check-input { width: 20px; height: 20px; margin-left: -30px; }
+.auth-card .btn-main, .auth-card .btn-main-outline { min-height: 52px; font-size: 1rem; }
+.auth-card button:focus-visible, .auth-card a:focus-visible { outline: 3px solid #107a7a; outline-offset: 3px; }
+@media (max-width: 576px) {
+    .auth-card { padding: 24px 16px !important; }
+    .registration-guide { padding: 16px; }
+    .registration-section { padding: 0 12px 20px; }
+    .registration-section .form-section-title { font-size: 1rem; gap: 8px; }
+    .registration-kicker { font-size: .65rem; letter-spacing: .05em; }
+}
